@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target dependency/* marek.smartluggage.backendsmartlugggage.BackendsmartluggageApplication
+web: java -jar target/backendsmartluggage-1.0.jar
