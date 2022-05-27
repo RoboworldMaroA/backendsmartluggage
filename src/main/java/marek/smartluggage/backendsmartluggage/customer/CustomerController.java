@@ -14,7 +14,7 @@ import java.util.List;
 //This class accept the request from the front end and send back responses.
 //this is a proper way we could have rest controller in main restfull app but
 // this is good practice do this that way
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")
 //@CrossOrigin(origins = "*")
 
 @RestController
