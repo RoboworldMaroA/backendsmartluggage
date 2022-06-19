@@ -65,7 +65,7 @@ public class TripController {
 
     //**********   PUT      *******************************************
     // put update data in the student for example we want ot change name and email
-    @PutMapping(path = "{api/v1/trip/tripId}")
+    @PutMapping(path = "api/v1/trip/{tripId}")
     public void updateTrip(
             @PathVariable("tripId") Long tripId,
             @RequestParam(required = false) String tripName
