@@ -54,9 +54,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
               .antMatchers("/admin").hasRole("ADMIN")//to this link has acces only user that has a role Admin
               .antMatchers("/user").hasAnyRole("ADMIN", "USER")//to this has an access users with role Admin and User
               .antMatchers("/","/login","/addUser","/displayUsers","/displayUsers/*").permitAll()
-        .antMatchers("/api/v1/customer").hasAnyRole("USER", "ADMIN")
+              .antMatchers("/api/v1/customer").hasAnyRole("USER", "ADMIN")
               .antMatchers("/deleteUsers/**").hasAnyRole("USER", "ADMIN")
-//              .antMatchers("/deleteUsers/**").hasAnyRole("USER", "ADMIN")
+               .antMatchers("/api/v1/trip").hasAnyRole("USER", "ADMIN")
 
 //              .antMatchers("/displayUsers").hasRole("ADMIN")
 //              .and().httpBasic().and().logout();
