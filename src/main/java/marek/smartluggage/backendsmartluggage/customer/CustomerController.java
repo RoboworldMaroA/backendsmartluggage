@@ -16,7 +16,7 @@ import java.util.List;
 // this is good practice do this that way
 //@CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")//this is for Deploy
 //@CrossOrigin(origins = "http://localhost:3000")//this is for Deploy
-//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")
 
 @RestController
 @RequestMapping(path = "/api/v1/customer")
