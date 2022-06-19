@@ -48,7 +48,7 @@ public class TripService {
     public void deleteTrip(Long tripId) {
         boolean exists = tripRepository.existsById(tripId);
         if (!exists){
-            throw new IllegalStateException("`trip  with id: "+ tripId+" does not exist.");
+            throw new IllegalStateException("Trip  with id: "+ tripId+" does not exist.");
         }
         //otherwise
         tripRepository.deleteById(tripId);
@@ -61,7 +61,7 @@ public class TripService {
     public void updateTrip(Long tripId,
                                String tripName) {
         Trip trip = tripRepository.findById(tripId).orElseThrow(() -> new IllegalStateException(
-                "Trop with id" + tripId + "dose not exist"));
+                "Trip with id" + tripId + "dose not exist"));
         if (tripName != null && tripName.length() > 0 && !Objects.equals(trip.getTripName(), tripName)) {
             trip.setTripName(tripName);
         }
