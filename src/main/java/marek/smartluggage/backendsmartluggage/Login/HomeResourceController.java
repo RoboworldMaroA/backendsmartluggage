@@ -17,7 +17,7 @@ import java.util.List;
 
 //@CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")
 @RestController
-@RequestMapping(path = "/")
+@RequestMapping()
 public class HomeResourceController {
 
     private final MyUserDetailService myUserDetailService;
