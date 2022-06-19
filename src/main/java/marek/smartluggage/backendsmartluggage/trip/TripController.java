@@ -14,10 +14,8 @@ import java.util.List;
 //this is a proper way we could have rst controller in main restfull app but
 // this is good practice do this that way
 @CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")
-
 @RestController
 @RequestMapping(path = "/api/v1/trip")
-//@CrossOrigin(origins = "http://localhost:3000")
 public class TripController {
     private final TripService tripService;
 
