@@ -82,7 +82,7 @@ public class HomeResourceController {
 
 
     //**********   DELETE     *******************************************
-    @DeleteMapping(path = "deleteUsers/{id}")
+    @DeleteMapping(path = "/deleteUsers/{id}")
     public void deleteUser(  @PathVariable("id") Integer id){
         MyUserDetailService.deleteUser(id);
     }
