@@ -37,6 +37,7 @@ public class MyUserDetailService implements UserDetailsService {
             throw new IllegalStateException("`customer  with id: "+ id+" does not exist.");
         }
         //otherwise, - method deleteById is from SpringFramework
+        System.out.println("I am in user repository delete user by ID id is: "+id);
         userRepository.deleteById(id);
     }
 
