@@ -55,19 +55,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
               .antMatchers("/admin").hasRole("ADMIN")//to this link has acces only user that has a role Admin
               .antMatchers("/user").hasAnyRole("ADMIN", "USER")//to this has an access users with role Admin and User
               .antMatchers("/","/login","/addUser","/displayUsers","/displayUsers/*").permitAll()
-              .antMatchers("/api/v1/customer").hasAnyRole("USER", "ADMIN")
-              .antMatchers("/deleteUsers/**").hasAnyRole("USER","ADMIN")
-               .antMatchers("/api/v1/trip").permitAll()
+//              .antMatchers("/api/v1/customer").hasAnyRole("USER", "ADMIN")
+//              .antMatchers("/deleteUsers/**").hasAnyRole("USER","ADMIN")
+//               .antMatchers("/api/v1/trip").permitAll()
 
+              .antMatchers("/api/v1/customer").permitAll()
+              .antMatchers("/deleteUsers/**").permitAll()
+              .antMatchers("/api/v1/trip").permitAll()
 //              .antMatchers("/displayUsers").hasRole("ADMIN")
 //              .and().httpBasic().and().logout();
 
 //
                 .anyRequest().authenticated()
 //              .and().httpBasic();
-//              .and().formLogin();
+              .and().formLogin();
 
-                .and().formLogin().loginPage("https://frontendsmartluggage.herokuapp.com/Login")
+//                .and().formLogin().loginPage("https://frontendsmartluggage.herokuapp.com/Login")
 //                .failureForwardUrl("https://frontendsmartluggage.herokuapp.com/")
       ;
 
