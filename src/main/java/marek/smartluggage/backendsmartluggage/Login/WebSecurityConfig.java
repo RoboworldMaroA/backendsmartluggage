@@ -3,6 +3,7 @@ package marek.smartluggage.backendsmartluggage.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -58,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .antMatchers("/api/v1/customer").hasAnyRole("USER", "ADMIN")
 //              .antMatchers("/deleteUsers/**").hasAnyRole("USER","ADMIN")
 //               .antMatchers("/api/v1/trip").permitAll()
-              .antMatchers("/api/v1/trip/*").hasRole("ADMIN")
+              .antMatchers((HttpMethod.DELETE),"/api/v1/trip/*").hasRole("ADMIN")
 
               .antMatchers("/api/v1/customer").permitAll()
               .antMatchers("/deleteUsers/**").permitAll()
