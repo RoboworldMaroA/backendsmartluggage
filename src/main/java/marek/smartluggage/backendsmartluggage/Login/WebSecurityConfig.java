@@ -68,7 +68,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .and().formLogin();
 
                 .and().formLogin().loginPage("https://frontendsmartluggage.herokuapp.com/Login")
-                .failureForwardUrl("https://frontendsmartluggage.herokuapp.com/")
+//                .failureForwardUrl("https://frontendsmartluggage.herokuapp.com/")
       ;
 
 
