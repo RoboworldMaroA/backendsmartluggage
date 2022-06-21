@@ -17,7 +17,7 @@ import java.util.List;
 //@RequestMapping(path = "/api/v1/trip")
 @CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")
 @RestController
-@RequestMapping(path = "/")
+@RequestMapping
 public class TripController {
     private final TripService tripService;
 
