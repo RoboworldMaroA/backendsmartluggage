@@ -62,6 +62,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
               .antMatchers("/api/v1/customer").permitAll()
               .antMatchers("/deleteUsers/**").permitAll()
               .antMatchers("/api/v1/trip").permitAll()
+              .antMatchers("/api/v1/trip/*").permitAll()
 //              .antMatchers("/displayUsers").hasRole("ADMIN")
 //              .and().httpBasic().and().logout();
 
