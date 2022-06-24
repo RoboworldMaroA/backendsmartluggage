@@ -51,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
       http
               .csrf().disable()
-              .cors().disable()
+//              .cors().disable()
               .authorizeRequests()
               .antMatchers("/admin").hasRole("ADMIN")//to this link has acces only user that has a role Admin
               .antMatchers("/user").hasAnyRole("ADMIN", "USER")//to this has an access users with role Admin and User
