@@ -55,8 +55,6 @@ public class HomeResourceController {
     }
 
 
-
-
     @PostMapping("/addUser")
     public void registerNewUser(@RequestBody User user) {
         myUserDetailService.addNewUser(user);
@@ -70,7 +68,7 @@ public class HomeResourceController {
         try {
             authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword()));
 
-            System.out.println("This is authentication object"+authentication);
+            System.out.println("This is authentication object" + authentication);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         } catch (BadCredentialsException e) {
             throw new Exception("Invalid credentials");
@@ -79,14 +77,11 @@ public class HomeResourceController {
     }
 
 
-
-
     //**********   DELETE     *******************************************
     @DeleteMapping(path = "/deleteUsers/{id}")
-    public void deleteUser(  @PathVariable("id") Integer id){
+    public void deleteUser(@PathVariable("id") Integer id) {
         MyUserDetailService.deleteUser(id);
     }
-
 
 
 }

@@ -15,7 +15,7 @@ import java.util.List;
 //this is a proper way we could have rest controller in main restfull app but
 // this is good practice do this that way
 @CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/api/v1/customer/")//this is for Deploy
-//@CrossOrigin(origins = "http://localhost:3000")//this is for Deploy
+//@CrossOrigin(origins = "http://localhost:3000")//this is for Development
 //@CrossOrigin(origins = "*")
 
 @RestController
