@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")
+@CrossOrigin(origins = "https://smartluggage.herokuapp.com/")
 @RestController
 @RequestMapping
 public class HomeResourceController {
