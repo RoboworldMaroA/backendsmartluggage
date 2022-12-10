@@ -60,7 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .antMatchers("/deleteUsers/**").hasAnyRole("USER","ADMIN")
 //               .antMatchers("/api/v1/trip").permitAll()
               .antMatchers(HttpMethod.OPTIONS,"/api/v1/trip/**").hasRole("ADMIN")
-              .antMatchers("/api/v1/**/**").hasRole("ADMIN")
+              .antMatchers("/api/v1/**/**").hasAnyRole("ADMIN","USER")
 
               .antMatchers("/api/v1/customer").permitAll()
               .antMatchers("/deleteUsers/**").permitAll()
