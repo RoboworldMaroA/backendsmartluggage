@@ -73,7 +73,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .and().httpBasic();
 //              .and().formLogin();
 
-                .and().formLogin().loginProcessingUrl("https://smartluggage.herokuapp.com/Login")
+                .and().formLogin().loginProcessingUrl("https://smartluggage.herokuapp.com/login")
               .defaultSuccessUrl("https://smartluggage.herokuapp.com/",true).permitAll()
 //                .failureForwardUrl("https://frontendsmartluggage.herokuapp.com/")
               .and().logout().permitAll()
