@@ -15,7 +15,7 @@ import java.util.List;
 // this is good practice do this that way
 //@CrossOrigin(origins = "https://frontendsmartluggage.herokuapp.com/")
 //@RequestMapping(path = "/api/v1/trip")
-@CrossOrigin(origins = "https://smartluggage.herokuapp.com/")
+@CrossOrigin(origins = "https://smartluggage.herokuapp.com")
 @RestController
 @RequestMapping
 public class TripController {
@@ -56,7 +56,7 @@ public class TripController {
 
 
     //**********   DELETE     *******************************************
-    @DeleteMapping(path = "api/v1/trip/{tripId}")
+    @DeleteMapping(path = "/api/v1/trip/{tripId}")
     public void deleteTrip(@PathVariable("tripId") Long Id) {
         tripService.deleteTrip(Id);
     }
@@ -65,7 +65,7 @@ public class TripController {
 
     //**********   PUT      *******************************************
     // put update data in the student for example we want ot change name and email
-    @PutMapping(path = "api/v1/trip/{tripId}")
+    @PutMapping(path = "/api/v1/trip/{tripId}")
     public void updateTrip(
             @PathVariable("tripId") Long tripId,
             @RequestParam(required = false) String tripName
