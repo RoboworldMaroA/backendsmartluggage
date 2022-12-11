@@ -59,12 +59,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .antMatchers("/api/v1/customer").hasAnyRole("USER", "ADMIN")
 //              .antMatchers("/deleteUsers/**").hasAnyRole("USER","ADMIN")
 //               .antMatchers("/api/v1/trip").permitAll()
-              .antMatchers(HttpMethod.OPTIONS,"/api/v1/trip/**").hasAnyRole("ADMIN","USER")
-              .antMatchers(HttpMethod.OPTIONS,"/api/v1/trip/*").hasAnyRole("ADMIN","USER")
+//              .antMatchers(HttpMethod.OPTIONS,"/api/v1/trip/**").hasAnyRole("ADMIN","USER")
+//              .antMatchers(HttpMethod.OPTIONS,"/api/v1/trip/*").hasAnyRole("ADMIN","USER")
               .antMatchers("/api/v1/customer").permitAll()
               .antMatchers("/deleteUsers/**").permitAll()
               .antMatchers("/api/v1/trip").permitAll()
-//              .antMatchers("/api/v1/trip/*").permitAll()
+              .antMatchers("/api/v1/trip/*").permitAll()
 //              .antMatchers("/displayUsers").hasRole("ADMIN")
 //              .and().httpBasic().and().logout();
 
