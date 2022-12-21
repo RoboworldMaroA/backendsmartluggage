@@ -40,6 +40,7 @@ public class TripService {
         //System.out.println(trip);//For Testing Only
 
         //instead of printing trip we want to save new trip
+        System.out.println("I am in trip service in method addNewTrio. Trip name is: "+trip.getTripName());
         tripRepository.save(trip);
     }
 
@@ -51,6 +52,7 @@ public class TripService {
             throw new IllegalStateException("Trip  with id: "+ tripId+" does not exist.");
         }
         //otherwise
+        System.out.println("I am in trip service in method deleteTrip by ID. Trip id is: "+tripId);
         tripRepository.deleteById(tripId);
     }
 
