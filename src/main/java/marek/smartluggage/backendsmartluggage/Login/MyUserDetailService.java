@@ -77,11 +77,11 @@ public class MyUserDetailService implements UserDetailsService {
     //implementation PUT
     @Transactional
     public void updateUsers(Integer id,
-                               String name) {
+                               String userName) {
          User user = userRepository.findById(id).orElseThrow(()-> new IllegalStateException(
                 "Customer with id"+id+"dose not exist"));
-        if (name != null && name.length()>0 && !Objects.equals(user.getUserName(), name)){
-            user.setUserName(name);
+        if (userName != null && userName.length()>0 && !Objects.equals(user.getUserName(), userName)){
+            user.setUserName(userName);
         }
         //check email
 //        if (email != null && email.length()>0 && !Objects.equals(user.getEmail(), email)){
