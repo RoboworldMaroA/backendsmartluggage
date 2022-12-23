@@ -55,6 +55,12 @@ public class HomeResourceController {
     }
 
 
+    //printing list of the users GET method
+    @GetMapping("/displayUsers/{id}")
+    public List<User> getUsers(@PathVariable int id) {
+        return myUserDetailService.getUsersById(id);
+    }
+
     @PostMapping("/addUser")
     public void registerNewUser(@RequestBody User user) {
         myUserDetailService.addNewUser(user);

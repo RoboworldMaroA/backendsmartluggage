@@ -94,4 +94,7 @@ public class MyUserDetailService implements UserDetailsService {
     }//end update customer
 
 
+    public List<User> getUsersById(int id) {
+        return userRepository.findById(id);
+    }
 }
