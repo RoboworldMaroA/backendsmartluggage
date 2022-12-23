@@ -3,13 +3,16 @@ package marek.smartluggage.backendsmartluggage.Login;
 
 import marek.smartluggage.backendsmartluggage.Login.model.MyUserDetails;
 import marek.smartluggage.backendsmartluggage.Login.model.User;
+import marek.smartluggage.backendsmartluggage.customer.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 
@@ -70,6 +73,25 @@ public class MyUserDetailService implements UserDetailsService {
         userRepository.save(user);
     }
 
+
+    //implementation PUT
+    @Transactional
+    public void updateUsers(Integer id,
+                               String name) {
+         User user = userRepository.findById(id).orElseThrow(()-> new IllegalStateException(
+                "Customer with id"+id+"dose not exist"));
+        if (name != null && name.length()>0 && !Objects.equals(user.getUserName(), name)){
+            user.setUserName(name);
+        }
+        //check email
+//        if (email != null && email.length()>0 && !Objects.equals(user.getEmail(), email)){
+//            Optional<Customer> customerOptional = userRepository.findCustomerByEmail(email);
+//            if(customerOptional.isPresent()){
+//                throw new IllegalStateException("email taken");
+//            }
+//            user.setEmail(email);
+//        }
+    }//end update customer
 
 
 }
