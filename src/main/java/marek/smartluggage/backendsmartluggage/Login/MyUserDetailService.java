@@ -78,10 +78,11 @@ public class MyUserDetailService implements UserDetailsService {
     @Transactional
     public void updateUsers(Integer id,
                                String userName) {
-         User user = userRepository.findById(id).orElseThrow(()-> new IllegalStateException(
+         User userUpdate = userRepository.findById(id).orElseThrow(()-> new IllegalStateException(
                 "Customer with id"+id+"dose not exist"));
-        if (userName != null && userName.length()>0 && !Objects.equals(user.getUserName(), userName)){
-            user.setUserName(userName);
+        if (userName != null && userName.length()>0 && !Objects.equals(userUpdate.getUserName(), userName)){
+            System.out.println("Hi I am in the update Users and I should update a name");
+            userUpdate.setUserName(userName);
         }
         //check email
 //        if (email != null && email.length()>0 && !Objects.equals(user.getEmail(), email)){
