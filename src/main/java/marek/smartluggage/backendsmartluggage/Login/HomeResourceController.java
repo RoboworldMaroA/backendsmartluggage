@@ -85,11 +85,10 @@ public class HomeResourceController {
 
     //**********   PUT      *******************************************
     // put update data in the customer for example we want ot change name and email
-    @PutMapping(path= "/upadateUsers/{id}")
+    @PutMapping(path= "/updateUsers/{id}")
     public void updateCustomer(
             @PathVariable("id") Integer id,
-            @RequestParam(required = false) String name,
-            @RequestParam(required = false) String email
+            @RequestParam(required = false) String name
     ){
         myUserDetailService.updateUsers(id,name);
     }
