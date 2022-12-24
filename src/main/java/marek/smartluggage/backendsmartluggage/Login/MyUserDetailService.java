@@ -77,21 +77,21 @@ public class MyUserDetailService implements UserDetailsService {
     //implementation PUT
     @Transactional
     public void updateUsers(Integer id,
-                               String userName) {
+                               String userName, String userEmail) {
          User userUpdate = userRepository.findById(id).orElseThrow(()-> new IllegalStateException(
-                "Customer with id"+id+"dose not exist"));
+                "Customer with id "+id+" does not exist!"));
         if (userName != null && userName.length()>0 && !Objects.equals(userUpdate.getUserName(), userName)){
             System.out.println("Hi I am in the update Users and I should update a name");
             userUpdate.setUserName(userName);
         }
-        //check email
-//        if (email != null && email.length()>0 && !Objects.equals(user.getEmail(), email)){
-//            Optional<Customer> customerOptional = userRepository.findCustomerByEmail(email);
-//            if(customerOptional.isPresent()){
-//                throw new IllegalStateException("email taken");
-//            }
-//            user.setEmail(email);
-//        }
+//        check email
+        if (userEmail != null && userEmail.length()>0 && !Objects.equals(userUpdate.getUserEmail(), userEmail)){
+            Optional<User> userOptional = userRepository.findCustomerByUserEmail(userEmail);
+            if(userOptional.isPresent()){
+                throw new IllegalStateException("email taken");
+            }
+            userUpdate.setUserEmail(userEmail);
+        }
     }//end update customer
 
 

@@ -94,9 +94,10 @@ public class HomeResourceController {
     @PutMapping(path= "/updateUsers/{id}")
     public void updateUser(
             @PathVariable("id") int id,
-            @RequestParam(required = false) String userName
+            @RequestParam(required = false) String userName,
+            @RequestParam(required = false) String userEmail
     ){
-        myUserDetailService.updateUsers(id,userName);
+        myUserDetailService.updateUsers(id,userName,userEmail);
     }
 
     //**********   PUT      *******************************************
@@ -104,9 +105,10 @@ public class HomeResourceController {
     @PutMapping(path= "/deleteUsers/{id}")
     public void updateUser2(
             @PathVariable("id") int id,
-            @RequestParam(required = false) String userName
+            @RequestParam(required = false) String userName,
+            @RequestParam(required = false) String userEmail
     ){
-        myUserDetailService.updateUsers(id,userName);
+        myUserDetailService.updateUsers(id,userName, userEmail);
     }
 
 }
