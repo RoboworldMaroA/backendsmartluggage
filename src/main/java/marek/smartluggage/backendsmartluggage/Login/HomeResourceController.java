@@ -92,13 +92,21 @@ public class HomeResourceController {
     //**********   PUT      *******************************************
     // put update data in the customer for example we want ot change name and email
     @PutMapping(path= "/updateUsers/{id}")
-    public void updateCustomer(
+    public void updateUser(
             @PathVariable("id") int id,
-            @RequestParam(required = false) String name
+            @RequestParam(required = false) String userName
     ){
-        myUserDetailService.updateUsers(id,name);
+        myUserDetailService.updateUsers(id,userName);
     }
 
-
+    //**********   PUT      *******************************************
+    // put update data in the customer for example we want ot change name and email
+    @PutMapping(path= "/deleteUsers/{id}")
+    public void updateUser2(
+            @PathVariable("id") int id,
+            @RequestParam(required = false) String userName
+    ){
+        myUserDetailService.updateUsers(id,userName);
+    }
 
 }
