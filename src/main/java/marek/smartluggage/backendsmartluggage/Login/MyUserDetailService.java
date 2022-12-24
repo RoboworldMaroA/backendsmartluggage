@@ -83,6 +83,7 @@ public class MyUserDetailService implements UserDetailsService {
         if (userName != null && userName.length()>0 && !Objects.equals(userUpdate.getUserName(), userName)){
             System.out.println("Hi I am in the update Users and I should update a name");
             userUpdate.setUserName(userName);
+            System.out.println("After update name is: "+userUpdate.getUserName());
         }
 //        check email
         if (userEmail != null && userEmail.length()>0 && !Objects.equals(userUpdate.getUserEmail(), userEmail)){
@@ -91,6 +92,8 @@ public class MyUserDetailService implements UserDetailsService {
                 throw new IllegalStateException("email taken");
             }
             userUpdate.setUserEmail(userEmail);
+
+            System.out.println("After update email is: "+userUpdate.getUserEmail());
         }
     }//end update customer
 
