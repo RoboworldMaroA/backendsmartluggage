@@ -18,6 +18,6 @@ public interface UserRepository extends JpaRepository<User,Integer > {
     List<User> findById(int id);
 
     @Query("SELECT s FROM Users s WHERE s.userEmail = ?1")
-    Optional<User> findCustomerByUserEmail(String userEmail);
+    Optional<User> findUserByUserEmail(String userEmail);
 
 }

@@ -87,7 +87,7 @@ public class MyUserDetailService implements UserDetailsService {
         }
 //        check email
         if (userEmail != null && userEmail.length()>0 && !Objects.equals(userUpdate.getUserEmail(), userEmail)){
-            Optional<User> userOptional = userRepository.findCustomerByUserEmail(userEmail);
+            Optional<User> userOptional = userRepository.findUserByUserEmail(userEmail);
             if(userOptional.isPresent()){
                 throw new IllegalStateException("email taken");
             }
