@@ -26,7 +26,6 @@ public class TripConfig {
     CommandLineRunner commandLineRunnerTrip(TripRepository tripRepository){
         return args -> {
             Trip TripToSpain = new Trip(
-                    //,
                     "Trip To Spain",
                     "Whether list 1",
                     "List ID 1",
@@ -113,14 +112,13 @@ public class TripConfig {
 
             //now we tell that we want save customer using list
 
-            if(TripToSpain.getTripName().equals("Trip to Spain")){
+            if(TripToSpain.getTripName().equals("Trip To Spain")){
                 System.out.println("is already");
 
             }
             tripRepository.saveAll(
 //                    List.of(TripToIreland, TripToSpain)
-                    List.of(TripToSpain)
-
+                    List.of((TripToSpain))
             );
         };
 
