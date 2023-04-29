@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import static java.time.Month.AUGUST;
 import static java.time.Month.OCTOBER;
@@ -111,6 +112,11 @@ public class TripConfig {
 
 
             //now we tell that we want save customer using list
+
+            if(TripToSpain.getTripName().equals("Trip to Spain")){
+                System.out.println("is already");
+
+            }
             tripRepository.saveAll(
 //                    List.of(TripToIreland, TripToSpain)
                     List.of(TripToSpain)
