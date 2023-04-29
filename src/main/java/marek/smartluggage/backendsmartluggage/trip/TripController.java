@@ -45,8 +45,8 @@ public class TripController {
     }
 
     //implementation post
-    // add new student
-    //request body is an element student with details
+    // add new trip
+    //request body is a trip data
 
     //**********   POST *******************************************
     @PostMapping(path = ("/api/v1/trip"))
