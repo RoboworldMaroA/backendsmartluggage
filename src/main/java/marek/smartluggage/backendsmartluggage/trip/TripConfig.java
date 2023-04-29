@@ -112,14 +112,10 @@ public class TripConfig {
 
             //now we tell that we want save customer using list
 
-            if(TripToSpain.getTripName().equals("Trip To Spain")){
-                System.out.println("is already");
-
-            }
-            tripRepository.saveAll(
-//                    List.of(TripToIreland, TripToSpain)
-                    List.of((TripToSpain))
-            );
+//            tripRepository.saveAll(
+////                    List.of(TripToIreland, TripToSpain)
+//                    List.of((TripToSpain))
+//            );
         };
 
 
