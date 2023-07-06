@@ -112,10 +112,10 @@ public class TripConfig {
 
             //now we tell that we want save customer using list
 
-//            tripRepository.saveAll(
-////                    List.of(TripToIreland, TripToSpain)
-//                    List.of((TripToSpain))
-//            );
+            tripRepository.saveAll(
+//                    List.of(TripToIreland, TripToSpain)
+                    List.of((TripToSpain))
+            );
         };
 
 

@@ -46,8 +46,8 @@ public class UserConfig {
                     "Dublin"
             );
 
-//            userRepository.saveAll(List.of(AdminMaro, UserMaro)
-//                    );
+            userRepository.saveAll(List.of(AdminMaro, UserMaro)
+                    );
 
             };
 
