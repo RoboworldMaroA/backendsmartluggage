@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Ignore file application.properties ###
+### When you push to Heroku than Hide this when Push to the GitHub then unhide
+!**/src/main/resources/application.properties
