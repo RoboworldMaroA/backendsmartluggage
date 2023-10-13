@@ -3,7 +3,6 @@ package marek.smartluggage.backendsmartluggage.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -75,8 +74,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .and().formLogin();
 
               //This 3 un hide later
-                .and().formLogin().loginProcessingUrl("https://smartluggage.herokuapp.com/login")
-              .defaultSuccessUrl("https://smartluggage.herokuapp.com/",true)
+                .and().formLogin().loginProcessingUrl("https://smartluggage-ijzs3.ondigitalocean.app/login")
+              .defaultSuccessUrl("https://smartluggage-ijzs3.ondigitalocean.app/",true)
               .permitAll()
 //                .failureForwardUrl("https://frontendsmartluggage.herokuapp.com/")
               .and().logout().permitAll()

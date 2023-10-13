@@ -49,7 +49,7 @@ public class TripService {
     public void addNewTrip(Trip trip) {
         Optional<Trip> tripOptional = tripRepository.findTripByTripName(trip.getTripName());
 
-        System.out.println("Is trip name in database?"+tripOptional.isPresent());
+        System.out.println("Is trip name in database? "+tripOptional.isPresent());
 
         if (tripOptional.isPresent()) {
             throw new IllegalStateException("Trip with that name is existing change the name please!");
@@ -57,7 +57,7 @@ public class TripService {
         //System.out.println(trip);//For Testing Only
 
         //instead of printing trip we want to save new trip
-        System.out.println("I am in trip service in method addNewTrio. Trip name is: "+trip.getTripName());
+        System.out.println("I am in trip service in method addNewTrip. Trip name is: "+trip.getTripName());
         tripRepository.save(trip);
     }
 
