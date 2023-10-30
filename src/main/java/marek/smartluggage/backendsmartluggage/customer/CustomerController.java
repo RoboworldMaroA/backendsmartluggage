@@ -14,7 +14,7 @@ import java.util.List;
 //This class accept the request from the front end and send back responses.
 //this is a proper way we could have rest controller in main restfull app but
 // this is good practice do this that way
-@CrossOrigin(origins = {"https://smartluggage.herokuapp.com","https://localhost:3000","https://smartluggage-ijzs3.ondigitalocean.app"})//this is for Deploy
+@CrossOrigin(origins = {"https://smartluggage.herokuapp.com","https://localhost:3000","https://smartluggage-ijzs3.ondigitalocean.app","https://marekaugustyn.whshost.com"})//this is for Deploy
 //@CrossOrigin(origins = "http://localhost:3000")//this is for Development for Not SSL
 //@CrossOrigin(origins = "*")
 
