@@ -73,7 +73,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //              .and().httpBasic();
 //              .and().formLogin();
 
-              //This 3 un hide later
+              //This 3
                 .and().formLogin().loginProcessingUrl("https://smartluggage-ijzs3.ondigitalocean.app/login")
               .defaultSuccessUrl("https://smartluggage-ijzs3.ondigitalocean.app/",true)
               .permitAll()
